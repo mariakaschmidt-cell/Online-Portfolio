@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dein Name – Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="Maria Logo.svg" type="image/svg+xml">
+</head>
+<body onscroll="checkScroll()">
+
+  <div class="main-container">
+    <header class="header">
+        <div class="logo">
+            <img src="Maria Logo.svg" alt="Dein Logo">
+        </div>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#work">Work</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <div class="left-side fade-in" style="animation-delay: 0.1s;">
+      <main class="left-content">
+          <section class="content-section">
+              <img src="Maria Auge.jpeg" alt="Auge" class="profile-image">
+              <p>
+                Es kommt nicht darauf an, was du ansiehst, sondern was du siehst - Henry David Thoreau
+              </p>
+          </section>
+      </main>
+    </div>
+    <div class="right-side fade-in" style="animation-delay: 0.2s;">
+      <section class="hero-section">
+          <h1>a creative portfolio</h1>
+      </section>
+    </div>
+  </div>
+
+  <section id="about" class="about-section fade-in" style="animation-delay: 0.3s;">
+    <div class="about-left-side">
+      <img src="Maria About.jpeg" alt="Maria" class="about-image">
+    </div>
+    <div class="about-right-side">
+      <div class="about-content">
+        <h2>
+          <span class="hi-text">Hi,</span> ich bin Maria
+        </h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+          <br><br>
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+        </p>
+      </div>
+    </div>
+  </section>
+  
+  <section id="creative-statement" class="fade-in-on-scroll">
+      <p class="slogan-text">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+      </p>
+  </section>
+
+  <section id="work" class="work-section">
+    <div class="work-container">
+      
+      <div class="project-item project-item--right slide-in-right">
+        <img src="Work 1.jpeg" alt="Projekt 1" class="project-image">
+        <div class="project-info">
+          <h3>Titel Projekt 1</h3>
+          <p class="keywords">
+            <span>Lorem</span>, <span>Lorem</span>, <span>Lorem</span>
+          </p>
+        </div>
+      </div>
+      
+      <div class="project-item project-item--left slide-in-left">
+        <img src="Work 2.jpeg" alt="Projekt 2" class="project-image">
+        <div class="project-info">
+          <h3>Titel Projekt 2</h3>
+          <p class="keywords">
+            <span>Lorem</span>, <span>Lorem</span>, <span>Lorem</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="project-item project-item--right slide-in-right">
+        <img src="Work 3.jpeg" alt="Projekt 3" class="project-image">
+        <div class="project-info">
+          <h3>Titel Projekt 3</h3>
+          <p class="keywords">
+            <span>Lorem</span>, <span>Lorem</span>, <span>Lorem</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="project-item project-item--left slide-in-left">
+        <img src="Work 4.jpeg" alt="Projekt 4" class="project-image">
+        <div class="project-info">
+          <h3>Titel Projekt 4</h3>
+          <p class="keywords">
+            <span>Lorem</span>, <span>Lorem</span>, <span>Lorem</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="project-item project-item--right slide-in-right">
+        <img src="Work 5.jpeg" alt="Projekt 5" class="project-image">
+        <div class="project-info">
+          <h3>Titel Projekt 5</h3>
+          <p class="keywords">
+            <span>Lorem</span>, <span>Lorem</span>, <span>Lorem</span>
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer fade-in" style="animation-delay: 0.6s;">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="Maria Logo.svg" alt="Dein Logo">
+      </div>
+      <div class="footer-links">
+        <h4>About</h4>
+        <ul>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-socials">
+        <h4>Socials</h4>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      &copy; 2025 Dein Name
+    </div>
+  </footer>
+
+  <script>
+    function checkScroll() {
+      const heroSection = document.querySelector('.right-side');
+      const heroHeight = heroSection.offsetHeight;
+      const body = document.body;
+
+      if (window.scrollY > heroHeight) {
+        body.classList.add('scrolled');
+      } else {
+        body.classList.remove('scrolled');
+      }
+
+      // Funktion für Scroll-Animationen
+      const elements = document.querySelectorAll('.fade-in-on-scroll, .slide-in-right, .slide-in-left');
+      elements.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) { // -100px als Puffer
+          el.classList.add('visible');
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
